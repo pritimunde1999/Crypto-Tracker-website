@@ -1,0 +1,19 @@
+.coin-infomation{
+   padding: 1rem 1.5rem;
+}
+
+.coin-info-desc{
+    line-height: 1.3rem;
+    word-spacing: 0.2rem;
+    cursor: pointer;
+}
+
+.coin-info-desc a{
+    color: var(--blue) !important;
+    text-decoration: underline !important;
+}
+
+.coin-info-desc a:hover{
+    color: var(--blue) !important;
+   
+}

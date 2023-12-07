@@ -1,0 +1,23 @@
+.search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:1.5rem;
+    padding: 1rem 1.5rem;
+    color: var(--grey);
+    background-color: var(--darkgrey);
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 0.8rem;
+}
+
+.search input{
+    width: 100%;
+    background-color: var(--darkgrey);
+    border: none;
+    outline: none;
+    color: var(--grey);
+    font-family: 'Inter';
+    font-size: 1.2rem;
+}

@@ -1,0 +1,198 @@
+.main-comp{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1rem 3rem;
+}
+
+.track-crypto-heading,
+.real-time-heading{
+    font-size: 6.5rem;
+    margin: 0;
+}
+
+.track-crypto-heading{
+     color: var(--white);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--white);
+}
+
+.track-crypto-heading:hover{
+    color: var(--black);
+   -webkit-text-stroke-color: var(--white);
+   transition: all 0.3;
+}
+
+.real-time-heading{
+    color: var(--blue);
+}
+
+.info{
+    font-size: 1.2rem;
+    color: var(--grey);
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-start;
+    gap:1.5rem;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.phone{
+    display: block;
+    width: 50%;
+    position: relative;
+}
+
+.iphone{
+    position: absolute;
+    z-index: 100;
+    min-width: 300px;
+    width: 40%;
+    right: 0;
+    margin: auto;
+    object-fit: contain;
+}
+
+.gradient{
+    position: absolute;
+    min-width: 250px;
+    width: 30%;
+    top: 4rem;
+    right: 0;
+    margin: auto;
+    object-fit: contain;
+}
+
+
+@media only screen and (max-width:1280px){
+    .track-crypto-heading,
+    .real-time-heading{
+    font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    .iphone{
+       min-width: 250px;
+    }
+
+    .gradient{
+        min-width: 200px;
+    }
+}
+
+
+@media only screen and (max-width:800px){
+    .main-comp{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:4rem;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .buttons{
+        justify-content: center;
+    }
+    .track-crypto-heading,
+    .real-time-heading{
+    font-size: 3rem;
+    }
+    .phone{
+        display: block;
+        margin: auto;
+    }
+     .iphone{
+      left:10%;
+    }
+
+    .gradient{
+        left:20%;
+    } 
+}
+
+
+@media only screen and (max-width:650px){
+    .iphone{
+      left:2%;
+    }
+
+    .gradient{
+        left:10%;
+    }
+
+    .track-crypto-heading,
+    .real-time-heading{
+    font-size: 4rem;
+    }
+
+}
+
+@media only screen and (max-width:520px){
+    .iphone{
+      left:-3%;
+    }
+
+    .gradient{
+        left:7%;
+    }
+
+    .track-crypto-heading,
+    .real-time-heading{
+    font-size: 3rem;
+    }
+
+}
+
+
+@media only screen and (max-width:460px){
+    .iphone{
+      left:-20%;
+    }
+
+    .gradient{
+        left:-5%;
+    }
+
+    .track-crypto-heading,
+    .real-time-heading{
+    font-size: 2rem;
+    
+    }
+
+    .track-crypto-heading{
+        
+       -webkit-text-stroke-width: 2px;
+       
+   }
+
+}
+
+
+@media only screen and (max-width:375px){
+    .iphone{
+      left:-28%;
+    }
+
+    .gradient{
+        left:-10%;
+    }
+
+    .track-crypto-heading,
+    .real-time-heading{
+    font-size: 1.5rem;
+    
+    }
+
+    .track-crypto-heading{
+        
+       -webkit-text-stroke-width: 1.5px;
+       
+   }
+
+}
+
