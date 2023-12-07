@@ -6,6 +6,15 @@
     margin-bottom: 2rem;
 }
 
+
+.toggle-btn.selected {
+    background-color: rgba(58, 128, 233, 0.1) !important;
+    color: var(--blue) !important;
+    border: 1px solid !important;
+    border-color: unset;
+  }
+  
+
 @media only Screen and (max-width:800px){
     .toggle-btn{
         font-size: 0.7rem !important;

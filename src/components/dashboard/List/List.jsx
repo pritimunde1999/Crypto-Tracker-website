@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './List.css'
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
 import { Tooltip } from '@mui/material';
 import { convertNumber } from '../../../functions/convertNumber';
 import { NavLink } from 'react-router-dom';
+import { IconButton } from '@mui/material';
+import StarBorderRoundedIcon from '@mui/icons-material/StarBorderRounded';
+import { searchInWatchlist } from '../../../functions/searchInWatchlist';
+import { removeFromWatchlist } from '../../../functions/removeFromWatchlist';
+import { addedToWatchlist } from '../../../functions/addedToWatchlist';
+import StarRoundedIcon from '@mui/icons-material/StarRounded';
 
-const List = ({ coin }) => {
+const List = ({ coin, isWatchlistPage }) => {
+    const [added,setAdded] = useState(searchInWatchlist(coin.id));
+    
     
     return (
         <NavLink to={`/coin/${coin.id}`}>
-            <tr className={`list-row ${coin.price_change_percentage_24h < 0 && 'list-row-red'}`}>
+            <tr className={`list-row ${coin.price_change_percentage_24h < 0 && 'list-row-red'}`} style={{ display: isWatchlistPage && !added && "none" }}>
 
 <td className='td-1' style={{ width: '35%' }}>
     <div className='info-cont'>
@@ -72,6 +80,30 @@ const List = ({ coin }) => {
         <p>${convertNumber(coin.market_cap)}</p>
     </Tooltip>
 </td>
+ 
+ <td className='icon-td'>
+ <IconButton
+            onClick={(e)=>{
+              e.preventDefault();
+              if(added){
+                 removeFromWatchlist(coin.id);
+                 setAdded(false)
+              }
+              else
+              {
+                 addedToWatchlist(coin.id);
+                 setAdded(true);
+              }
+            }}
+          >
+            {
+              added ? 
+              <StarRoundedIcon className={`watchlist-icon-list ${coin.price_change_percentage_24h <0 && 'watchlist-icon-red'}`}/>
+              :
+              <StarBorderRoundedIcon className={`watchlist-icon-list ${coin.price_change_percentage_24h <0 && 'watchlist-icon-red'}`}/>
+            }
+          </IconButton>
+ </td>
 </tr>
         </NavLink>
     )

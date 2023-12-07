@@ -4,12 +4,16 @@ import DashboardPage from "./pages/DashboardPage"
 import WatchlistPage from "./pages/WatchlistPage"
 import ComparePage from "./pages/ComparePage"
 import CoinPage from "./pages/CoinPage"
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 function App() {
 
 
   return (
+    <div>
+      <ToastContainer/>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -20,6 +24,7 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+    </div>
   )
 }
 

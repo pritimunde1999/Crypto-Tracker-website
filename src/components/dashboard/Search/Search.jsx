@@ -7,7 +7,7 @@ const Search = ({search,setSearch}) => {
   return (
     <div className='search'>
         <SearchRoundedIcon/>
-        <input type='text' value={search} onChange={(e)=>setSearch(e.target.value)}/>
+        <input type='text' placeholder='Search' value={search} onChange={(e)=>setSearch(e.target.value)}/>
     </div>
   )
 }

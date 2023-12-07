@@ -27,7 +27,7 @@ export default function TemporaryDrawer() {
                 <div className='drawer-div'>
                 <NavLink className='link' to='/'>Home</NavLink>
            <NavLink className='link' to='/compare'>Compare</NavLink>
-           {/* <NavLink className='link' to='/watchlist'>Watchlist</NavLink> */}
+           <NavLink className='link' to='/watchlist'>Watchlist</NavLink>
            <NavLink to='/dashboard'>
            <Button text="Dashboard" onClick={()=>{console.log("clicked")}}/>
            </NavLink>

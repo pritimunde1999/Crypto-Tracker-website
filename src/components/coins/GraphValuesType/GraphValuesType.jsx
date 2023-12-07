@@ -11,9 +11,7 @@ export default function GraphValuesTypeToggle({graphValuesType,handleGraphValueT
       exclusive
       onChange={handleGraphValueTypeChange}
       sx={{
-        "& .Mui-selected" :{
-            color: 'var(--blue) !important'
-        },
+        
         borderColor : "var(--blue)",
         border : 'unset !important',
         "& .MuiToggleButtonGroup-grouped":{
@@ -27,9 +25,27 @@ export default function GraphValuesTypeToggle({graphValuesType,handleGraphValueT
 
       }}
     >
-      <ToggleButton className='toggle-btn' value="prices">Price</ToggleButton>
-      <ToggleButton className='toggle-btn' value="market_caps">Market Cap</ToggleButton>
-      <ToggleButton className='toggle-btn' value="total_volumes">Total Volume</ToggleButton>
+      <ToggleButton
+          className={`toggle-btn ${graphValuesType === 'prices' ? 'selected' : ''}`}
+          value="prices"
+          sx={{
+            backgroundColor: graphValuesType === 'prices' ? 'rgba(58, 128, 233,0.1) !important' : 'unset',
+          }}
+        >Price</ToggleButton>
+     <ToggleButton
+          className={`toggle-btn ${graphValuesType === 'market_caps' ? 'selected' : ''}`}
+          value="market_caps"
+          sx={{
+            backgroundColor: graphValuesType === 'market_caps' ? 'rgba(58, 128, 233,0.1) !important' : 'unset',
+          }}
+        >Market Cap</ToggleButton>
+      <ToggleButton
+          className={`toggle-btn ${graphValuesType === 'total_volumes' ? 'selected' : ''}`}
+          value="total_volumes"
+          sx={{
+            backgroundColor: graphValuesType === 'total_volumes' ? 'rgba(58, 128, 233,0.1) !important' : 'unset',
+          }}
+        >Total Volume</ToggleButton>
    
     </ToggleButtonGroup>
     </div>

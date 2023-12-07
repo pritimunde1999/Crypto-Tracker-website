@@ -15,23 +15,23 @@
     transition: all 0.3s;
 }
 
-.info-cont{
+.grid-info-cont{
     display: flex;
     align-items: center;
     gap:1rem;
 }
 
-.coin-logo{
+.grid-coin-logo{
     width:4rem;
     height: 4rem;
 }
 
-.name-info{
+.grid-name-info{
     display: flex;
     flex-direction: column;
 }
 
-.coin-symbol{
+.grid-coin-symbol{
     text-transform: uppercase;
     color: var(--white);
     font-weight: 600;
@@ -39,14 +39,14 @@
     margin: 0;
 }
 
-.coin-name{
+.grid-coin-name{
     text-transform: capitalize;
     color:var(--grey);
     font-size: 1rem;
     margin: 0;
 }
 
-.chip-cont{
+.grid-chip-cont{
     display: flex;
     justify-content: flex-start;
     gap:1rem;
@@ -54,7 +54,7 @@
     margin: 2rem 0rem;
 }
 
-.price-chip {
+.grid-price-chip {
     border: 2px solid var(--green);
     border-radius: 2rem;
     
@@ -66,14 +66,14 @@
     max-width: 3rem;
 }
 
-.price-chip:hover, .icon-chip:hover{
+.grid-price-chip:hover, .grid-icon-chip:hover{
     background-color: var(--green);
     color: var(--white);
     transition: all 0.3s;
 }
 
 
-.icon-chip{
+.grid-icon-chip{
     border: 2px solid var(--green);
     width: 2rem;
     height: 2rem;
@@ -97,12 +97,12 @@
     transition: all 0.3s;
 }
 
-.coin-price{
+.grid-coin-price{
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.market-val{
+.grid-market-val{
     color: var(--grey);
     font-size: 1.2rem;
     font-weight: 500;
@@ -112,6 +112,42 @@
 }
 
 
-.market-val p{
+.grid-market-val p{
     margin: 0;
 }
+
+
+.flex-grid-watch-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.watchlist-icon {
+    padding: 0.5rem;
+    display: block;
+    color: var(--green);
+    font-size: 2rem !important;
+    margin-left: auto;
+    border: 2px solid var(--green);
+    border-radius: 3rem;
+    font-weight: 600;
+  }
+
+  .watchlist-icon-red {
+    color: var(--red);
+    border: 2px solid var(--red);
+  }
+
+  .watchlist-icon:hover {
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s;
+  }
+
+  .watchlist-icon-red:hover {
+    background-color: var(--red) !important;
+    color: var(--white);
+    transition: all 0.3s;
+  }

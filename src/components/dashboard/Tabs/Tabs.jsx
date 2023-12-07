@@ -10,7 +10,7 @@ import List from '../List/List';
 
 
 
-export default function Tabs({coins}) {
+export default function Tabs({coins, isWatchlistPage}) {
   const [value, setValue] = useState('grid');
  
 
@@ -40,7 +40,7 @@ export default function Tabs({coins}) {
         <TabPanel value="grid" className='grid-container'>
             {
                 coins.map((coin,i)=>(
-                    <Grid coin={coin} key={i}/>
+                    <Grid coin={coin} key={i} isWatchlistPage={isWatchlistPage}/>
                 ))
             }
         </TabPanel>
@@ -48,7 +48,7 @@ export default function Tabs({coins}) {
             <table>
             {
                 coins.map((coin,i)=>(
-                   <List coin={coin} key={i} />
+                   <List coin={coin} key={i} isWatchlistPage={isWatchlistPage}/>
                 ))
             }
             </table>
